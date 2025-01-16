@@ -9,7 +9,7 @@ data:extend(
     name = "terrapalus-1",
     track_type = "main-track",
     planet = "terrapalus",
-    sound = "__terrapalus__/sound/ambient/terrapalus/terrapalus-1.ogg",
+    sound = "__terrapalus-prime__/sound/ambient/terrapalus/terrapalus-1.ogg",
     weight = 10,
   },
   {
@@ -17,7 +17,7 @@ data:extend(
     name = "terrapalus-2",
     track_type = "main-track",
     planet = "terrapalus",
-    sound = "__terrapalus__/sound/ambient/terrapalus/terrapalus-2.ogg",
+    sound = "__terrapalus-prime__/sound/ambient/terrapalus/terrapalus-2.ogg",
     weight = 10,
   },
   {
@@ -25,7 +25,7 @@ data:extend(
     name = "terrapalus-3",
     track_type = "main-track",
     planet = "terrapalus",
-    sound = "__terrapalus__/sound/ambient/terrapalus/terrapalus-3.ogg",
+    sound = "__terrapalus-prime__/sound/ambient/terrapalus/terrapalus-3.ogg",
     weight = 10,
   },
   {
@@ -33,7 +33,7 @@ data:extend(
     name = "terrapalus-4",
     track_type = "main-track",
     planet = "terrapalus",
-    sound = "__terrapalus__/sound/ambient/terrapalus/terrapalus-4.ogg",
+    sound = "__terrapalus-prime__/sound/ambient/terrapalus/terrapalus-4.ogg",
     weight = 10,
   },
   {
@@ -41,7 +41,7 @@ data:extend(
     name = "terrapalus-5",
     track_type = "main-track",
     planet = "terrapalus",
-    sound = "__terrapalus__/sound/ambient/terrapalus/terrapalus-5.ogg",
+    sound = "__terrapalus-prime__/sound/ambient/terrapalus/terrapalus-5.ogg",
     weight = 10,
   },
 --   {

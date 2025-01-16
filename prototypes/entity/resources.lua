@@ -11,7 +11,7 @@ data:extend({
   {
     type = "resource",
     name = "palusium-ore",
-    icon = "__terrapalus__/graphics/icons/palusium-ore.png",  -- Change to a custom icon if available
+    icon = "__terrapalus-prime__/graphics/icons/palusium-ore.png",  -- Change to a custom icon if available
     icon_size = 64,
     flags = {"placeable-neutral"},
     order = "x-y-z",  -- Set an order that’s distinct from uranium for inventory sorting
@@ -36,12 +36,13 @@ data:extend({
       has_starting_area_placement = false,
       random_spot_size_minimum = 2,
       random_spot_size_maximum = 4,
-      regular_rq_factor_multiplier = 1
+      regular_rq_factor_multiplier = 1,
+      candidate_spot_count = 92, -- To match 0.17.50 placement
     },
     stage_counts = {10000, 6330, 3670, 1930, 870, 270, 100, 50},
     stages = {
       sheet = {
-        filename = "__terrapalus__/graphics/entity/palusium-ore/palusium-ore.png",  -- Use custom graphics if available
+        filename = "__terrapalus-prime__/graphics/entity/palusium-ore/palusium-ore.png",  -- Use custom graphics if available
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -52,7 +53,7 @@ data:extend({
     },
     stages_effect = {
       sheet = {
-        filename = "__terrapalus__/graphics/entity/palusium-ore/palusium-ore-glow.png",  -- Use custom glow graphics if available
+        filename = "__terrapalus-prime__/graphics/entity/palusium-ore/palusium-ore-glow.png",  -- Use custom glow graphics if available
         priority = "extra-high",
         width = 128,
         height = 128,
@@ -95,7 +96,7 @@ data:extend({
 -- local palusium_ore = table.deepcopy(data.raw["resource"]["uranium-ore"])
 
 -- palusium_ore.name = "palusium-ore"
--- palusium_ore.icon = "__terrapalus__/graphics/icons/palusium-ore.png"
+-- palusium_ore.icon = "__terrapalus-prime__/graphics/icons/palusium-ore.png"
 -- palusium_ore.icon_size = 64
 -- palusium_ore.minable.result = "palusium-ore"
 

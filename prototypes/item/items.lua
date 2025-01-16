@@ -5,7 +5,7 @@ data:extend({
     {
         type = "item",
         name = "inhibitor-lamp",
-        icon = "__terrapalus__/graphics/icons/inhibitor-lamp.png",
+        icon = "__terrapalus-prime__/graphics/icons/inhibitor-lamp.png",
         icon_size = 64,
         icon_mipmaps = 4,
         subgroup = "circuit-network",
@@ -20,7 +20,7 @@ data:extend({
     {
         type = "item",
         name = "palusium-ore",
-        icon = "__terrapalus__/graphics/icons/palusium-ore.png", 
+        icon = "__terrapalus-prime__/graphics/icons/palusium-ore.png", 
         icon_size = 64,
         subgroup = "raw-resource",
         order = "b[palusium-ore]",
@@ -34,7 +34,7 @@ data:extend({
     {
         type = "item",
         name = "palusium-plate",
-        icon = "__terrapalus__/graphics/icons/palusium-plate.png",  
+        icon = "__terrapalus-prime__/graphics/icons/palusium-plate.png",  
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "d[palusium-plate]",
@@ -43,7 +43,7 @@ data:extend({
     {
         type = "item",
         name = "palusium-powder",
-        icon = "__terrapalus__/graphics/icons/palusium-powder.png", 
+        icon = "__terrapalus-prime__/graphics/icons/palusium-powder.png", 
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "d[palusium-powder]",
@@ -52,7 +52,7 @@ data:extend({
     {
         type = "item",
         name = "palusium-crystal",
-        icon = "__terrapalus__/graphics/icons/palusium-crystal.png", 
+        icon = "__terrapalus-prime__/graphics/icons/palusium-crystal.png", 
         icon_size = 64,
         subgroup = "intermediate-product",
         order = "d[palusium-powder]",
@@ -75,7 +75,7 @@ data:extend({
     -- {
     --     type = "item",
     --     name = "uv-stabilizer",
-    --     icon = "__terrapalus__/graphics/entity/uv-stabilizer/quantum-stabilizer-hr-animation-1.png", -- Set an image as the item icon
+    --     icon = "__terrapalus-prime__/graphics/entity/uv-stabilizer/quantum-stabilizer-hr-animation-1.png", -- Set an image as the item icon
     --     icon_size = 64,
     --     subgroup = "production-machine",
     --     order = "b[uv-stabilizer]",

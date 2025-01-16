@@ -1,5 +1,5 @@
 local planet_map_gen = require("prototypes/planet/planet-terrapalus-map-gen")
-local effects = require("__terrapalus__/prototypes/planet/surface-render-parameter-effects")
+local effects = require("__terrapalus-prime__/prototypes/planet/surface-render-parameter-effects")
 local asteroid_util = require("__space-age__/prototypes/planet/asteroid-spawn-definitions")
 local planet_catalogue_gleba = require("__space-age__/prototypes/planet/procession-catalogue-gleba")
 -- local temperature = settings.startup["surface-temperature"].value
@@ -16,8 +16,8 @@ data:extend(
     {
         type = "planet",
         name = "terrapalus",
-        icon = "__terrapalus__/graphics/icons/terrapalus.png",
-        starmap_icon = "__terrapalus__/graphics/icons/starmap-planet-terrapalus.png",
+        icon = "__terrapalus-prime__/graphics/icons/terrapalus.png",
+        starmap_icon = "__terrapalus-prime__/graphics/icons/starmap-planet-terrapalus.png",
         starmap_icon_size = 512,
         gravity_pull = 0,
         distance = 22,

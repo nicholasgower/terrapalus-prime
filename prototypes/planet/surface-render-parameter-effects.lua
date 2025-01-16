@@ -6,12 +6,12 @@ effects.terrapalus_clouds_effect_properties =
     {
       shape_noise_texture =
       {
-        filename = "__terrapalus__/graphics/clouds-noise.png",
+        filename = "__terrapalus-prime__/graphics/clouds-noise.png",
         size = 2048
       },
       detail_noise_texture =
       {
-        filename = "__terrapalus__/graphics/clouds-detail-noise.png",
+        filename = "__terrapalus-prime__/graphics/clouds-detail-noise.png",
         size = 2048
       },
 
@@ -40,12 +40,12 @@ effects.terrapalus_clouds_effect_properties =
       {
         shape_noise_texture =
         {
-          filename = "__terrapalus__/graphics/clouds-noise.png",
+          filename = "__terrapalus-prime__/graphics/clouds-noise.png",
           size = 2048
         },
         detail_noise_texture =
         {
-          filename = "__terrapalus__/graphics/clouds-detail-noise.png",
+          filename = "__terrapalus-prime__/graphics/clouds-detail-noise.png",
           size = 2048
         },
         opacity = 0.6,

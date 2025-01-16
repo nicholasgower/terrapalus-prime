@@ -3,7 +3,7 @@ data:extend(
     {
         type = "fluid",
         name = "ultravium",
-        icon = "__terrapalus__/graphics/icons/fluid/ultravium.png",
+        icon = "__terrapalus-prime__/graphics/icons/fluid/ultravium.png",
         subgroup = "fluid",
         order = "b[new-fluid]-c[terrapalus]-b[ultravium]",
         default_temperature = 15,
