@@ -1,81 +1,66 @@
-[![Release](https://github.com/fgardt/factorio-mod-template/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/fgardt/factorio-mod-template/actions/workflows/release.yml)
-<!--                           ^======[REPLACE THIS]======^                                                                          ^======[REPLACE THIS]======^  -->
+# Terra Palus
+A dark satellite locked in eternal twilight, Terra Palus is locked in orbit of the verdant world of Gleba; a peculiar dance that keeps it perpetually shrouded from direct sunlight. This dim, foreboding moon presents unique challenges to engineering operations, as conventional solar power systems prove useless in its perpetual gloom.
 
-# factorio-mod-template
+The surface of Terra Palus is dominated by vast swamplands where stagnant waters merge with solid ground in treacherous patterns. The atmosphere, thick with organic particulates and bioluminescent spores, creates an eerie twilight that persists regardless of its position relative to Gleba. This unique atmospheric composition interacts catastrophically with night vision equipment, producing harmful light wavelengths that can permanently damage the enhanced optical sensors (eyeballs) used by engineering personnel.
 
-A small Factorio Mod template which also contains GitHub Actions for automatic changelog generation, packaging and releasing to the [Factorio Mod Portal](https://mods.factorio.com)
+Curiously, the moon harbors an unprecedented convergence of hostile life forms. Both the chitinous Biters native to Nauvis and the tentacled Pentapods of Gleba have established thriving populations here, suggesting a complex geological history.  Terra Palus may have formed from fragments of both Nauvis and Gleba, torn away during a cataclysmic event in the solar system's early history.
 
-# How it works
+## Visit Terra Palus if you...
+- Love spiders
+- Love biters
+- Love the dark
+- Have a burning desire to use light as a weapon
 
-This template uses [semantic-release](https://github.com/semantic-release/semantic-release) to automate the changelog generation aswell as packaging and releasing of the mod. \
-To achieve this it analyzes your commit messages to figure out what the new version should be and what to put into the changelog.
-Packaging and releasing to the factorio mod portal is done with [this plugin](https://github.com/fgardt/semantic-release-factorio). \
-Additionally the GitHub Action will also create a release in your repository on GitHub itself.
+----
 
-Once you push new commits to the main branch the release action will trigger. \
-First it will analyze all commits since the last release (determined from the last tag) to figure out if a new version should be released and what version it should be. \
-To make this possible you need to follow a commit message convention. The default convention this template uses is [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) with the following types:
+## "Features"
+Terra Palus is a small swamp-moon that orbits Gleba; you can unlock access to Terra Palus on the tech tree after researching Gleba.
+- Always night - Terra Palus gets no sun; solar panels and accumulators won't work here.
+- Night vision equipment does not work here and will be moved back to your inventory if you have it on your armour.
+- Biters and Pentapods have bonded over their united hatred of your pollution.
+- Swampy, muddy, wet landscapes that require a lot of landfill are abundant.
+- [IN PROGRESS] Light Defence Technology - use Palusium ore (NEW) to build inhibitor lamps that freeze enemies in place.
 
-| Commit type                 | Changelog section |
-| --------------------------- | ----------------- |
-| `feat` or `feature`         | `Features`        |
-| `fix`                       | `Bugfixes`        |
-| `perf` or `performance`     | `Optimizations`   |
-| `compat` or `compatibility` | `Compatibility`   |
-| `balance`                   | `Balancing`       |
-| `graphics`                  | `Graphics`        |
-| `sound`                     | `Sounds`          |
-| `gui`                       | `Gui`             |
-| `info`                      | `Info`            |
-| `locale`                    | `Locale`          |
-| `translate`                 | `Translation`     |
-| `control`                   | `Control`         |
-| `other`                     | `Changes`         |
+## Bugs
+- Haven't quite worked out how the starmap/remote view interface works yet so it looks like the moon orbits the sun. Just ignore that for now.
+- Pentapod eggs that are left over after deaths of some spider mobs seem to be auto-collected into your inventory as if you're holding F. I wonder if this planet is missing something Gleba does with these automatically, I have no idea why this is happening and haven't played Gleba to see if this is expected behaviour but it seems weird.
+- Sometimes if you load a save then delete a light that had frozen enemies, they stay frozen forever. That may or may not be fixed already.
+- Inhibitor lamp UV damage actually stacks - it's not supposed to stack, so I turned this off for now.
+- In Factorio 1.0 when an inserter arm had hovered over an empty sprite and you placed a box down, the box would collect the item on the floor but in Factorio 2.0 (or my crystal items) they get stuck under the box you place.
+- Rocket stacking is not scaled properly for some items (some items are missing a weight parameter), need to fix.
+- In Factoriopedia, Palusium ore only appears once in the preview but the other ores appear richer. Might be a setting somewhere. Tried to fix this with a lua.
+- Probably other things because I'm a noob.
 
-Because a push to the main branch triggers the release action it is recommended to work on a separate branch until your work is done and then merge that branch into main to release it. \
-_Or you just work locally and if you want to release you push your changes to main, up to you how you want to do it ;)_
+## To do
+- Make the lamps icons purple on the map
+- Finish Light Defense tech tree (I need to add a ground-based crusher entity/item to crush the Palusium ore into Palusium crystal)
+- Find out how to apply "ghost" animation/effect/sticker to frozen enemies for fun to show stasis/etc
 
-# How to use
+# About
+I really like Factorio and I wanted to learn a bit about how to build a mod in minimum viable product form. I thought learning how to mod a planet/moon would be the most fun place to start. It's not perfect or balanced, and is just to learn and have fun - I'm open to any feedback. Hope you enjoy it!
 
-## Repository setup
+## Useful factorio commands/info:
 
-Click the `Use this template` button and create your own repository.
+https://github.com/tburrows13/factorio-2.0-mod-porting-guide/blob/master/utilising-2.0-features.md
+### Force chunk generation:
+From Factorio 0.13.0 apparently. Useful for viewing a map gen in an existing game.
+/c game.player.force.chart(game.player.surface,{{x = -1024, y = -1024}, {x = 1024, y = 1024}})
 
-Once you have your new repository you need to add a Factorio token as a GitHub Actions secret so that the mod releasing can work. \
-To get the token go to [Factorio's website](https://factorio.com/login) and login with your account. \
-Then you need to go to your [profile](https://factorio.com/profile) and generate a new API key. \
-The API key needs `Upload Mods`, `Publish Mods` and `Edit Mods` permissions. Copy the generated key.
+### set surface daytime (1.0 = day, 0.5 = night)
+/c game.player.surface.daytime = 0.5
 
-Now you need to go to your repository settings > `Secrets and variables` > `Actions` and add a new Repository secret called `FACTORIO_TOKEN` with your copied key as the secret.
 
-## Mod setup
+# Terra Palus Soundtrack
+- https://pixabay.com/music/mystery-mysterious-and-mystic-116127/ 
+- https://pixabay.com/music/mystery-whispers-in-the-rain-255654/ 
+- https://pixabay.com/music/trap-musique-suspence-mysterieux-199399/
+- https://pixabay.com/music/crime-scene-mysterious-disappearances-245988/
+- https://pixabay.com/music/mystery-mysterious-mystical-depressive-anxious-143163/
+- 
 
-- Swap out the [`LICENSE`](LICENSE) to your own liking _**(especially change out my name for yours)**_
-- Populate the [`info.json`](info.json) file with correct values _(the `version` field gets updated automatically)_
-- Add the corresponding text into [`locale.cfg`](locale/en/locale.cfg)
-- Add a `thumbnail.png` to the root of the repository _([ideally 144x144px](https://wiki.factorio.com/Tutorial:Mod_structure#Files))_
-
-# Misc
-
-## How the packaging works
-
-The [`semantic-release-factorio` plugin](https://github.com/fgardt/semantic-release-factorio) uses the `git archive` command to package the mod. \
-That way you can specify what folders / files to exclude from your packaged mod by specifying them in [`.gitattributes`](.gitattributes).
-
-If you want to locally test packaging of your mod you can run the following command:
-```sh
-git archive --format zip --prefix [YOUR-MOD-NAME]/ --worktree-attributes --output [YOUR-MOD-NAME]_[VERSION].zip HEAD
-```
-
-## Changing the commit message convention
-
-If you want to change the commit message convention you can do so by changing the 2 `preset` fields in the [`.releaserc.json`](.releaserc.json) file. \
-Possible presets are: [`angular`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular), [`atom`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-atom), [`codemirror`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-codemirror), [`ember`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-ember), [`eslint`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint), [`express`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-express), [`jquery`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-jquery), [`jshint`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-jshint), [`conventionalcommits`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits).
-
-Additionally you also need to modify the worflow file [`.github/workflows/release.yml`](.github/workflows/release.yml) to use the package that corresponds to your chosen preset. \
-Replace `conventional-changelog-conventionalcommits` with `conventional-changelog-[YOUR PRESET]` accordingly.
-
-## Need help?
-
-Checkout the [official Factorio Discord](https://discord.gg/factorio) and check the pins in the `#mod-making` channel. \
-There is also the [Lua API documentation](https://lua-api.factorio.com/latest/) and the [modding section in the wiki](https://wiki.factorio.com/Modding).
+Need to add the following:
+- https://pixabay.com/music/crime-scene-turf-war-244492/
+- https://pixabay.com/music/mystery-mysterious-celesta-114064/
+- https://pixabay.com/music/ambient-mysterious-ambient-suspense-atmosphere-252023/
+- https://pixabay.com/music/modern-classical-sad-violin-150146/
+- https://pixabay.com/music/mystery-peaceful-eerie-piano-196706/

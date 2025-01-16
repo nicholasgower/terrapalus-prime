@@ -1,0 +1,13 @@
+require("prototypes.planet.planet")
+require("prototypes.planet.surface-render-parameter-effects")
+require("prototypes.technology")
+require("prototypes.entity.entities")
+require("prototypes.item.items")
+require("prototypes.recipe.recipes")
+require("prototypes.entity.resources")
+require("prototypes.entity.turrets")
+require("prototypes.stickers")
+require("prototypes.fluid")
+require("prototypes.autoplace-controls")
+require("prototypes.ambient-sounds")
+
